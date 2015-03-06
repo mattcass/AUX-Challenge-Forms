@@ -276,17 +276,21 @@ label.csv {
 }
 
 label.csv {
-	width: 62px; 
+	width: 70px; 
 	height: 32px;
 	margin-left: 2%;
 	margin-top: 6px;
 }
 
 
-
-input#securityCode + label {
+label.csv {
 	background: url('../images/spritez.png') no-repeat 0 -124px;
 }
+label.csv.xpress {
+	background: url('../images/spritez.png') no-repeat 0 -81px;
+}
+
+
 input#amex + label {
 	background: url('../images/spritez.png') no-repeat -1px -40px;
 }
