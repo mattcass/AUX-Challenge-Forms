@@ -24,49 +24,48 @@
 <main class="formContainer">
 	<form>
 		<fieldset>
-			<legend>First, name your portfolio</legend>	
-			<span>1</span>
-				<ul>
-					<li class="portfolioName">		
+			<legend><span class="number">1</span>First, name your portfolio</legend>	
+				<ul class="fieldsetEntry">
+					<li>		
 						<label for="portfolioName">Portfolio name</label>
-						<input name="portfolioName" type="text" id="portfolioName" required>
+						<input name="portfolioName" type="text" id="portfolioName" class="validation" required>
 					</li>
-					<li class="portfolioAddress">		
-						<label for="portfolioAddress">Portfolio address</label> 
-						<input name="portfolioAddress" type="text" id="portfolioAddress" required>
+					<li>		
+						<label for="portfolioAddress" class="portFirstLabel">Portfolio address</label> 
+						<input name="portfolioAddress" type="text" id="portfolioAddress" class="portInput" required>
+						<label for="portfolioAddress" class="portSecondLabel">.sample.com</label>
 					</li>
+
 				</ul>
 		</fieldset>
 
 		<fieldset>
-			<legend>Now, enter your account details</legend>
-			<span>2</span>
-				<ul>
-					<li class="nameDetails">		
+			<legend><span class="number">2</span>Now, enter your account details</legend>
+				<ul class="fieldsetEntry">
+					<li>		
 						<label for="nameDetails">Name</label>
 						<input name="nameDetails" type="text" id="nameDetails" required>
 					</li>
-					<li class="emailDetails">		
+					<li>		
 						<label for="emailDetails">Email</label>
-						<input name="emailDetails" type="email" id="emailDetails" required>
+						<input name="emailDetails" type="email" id="emailDetails" class="validation" required>
 						<p>NOTE: We'll never share your email, promise.</p>
 					</li>
-					<li class="passwordDetails">		
+					<li>		
 						<label for="passwordDetails">Password</label>
 						<input name="passwordDetails" type="password" id="passwordDetails" required>
 					</li>
 				</ul>
 		</fieldset>
 
-		<fieldset>
-			<legend>Finally, enter your payment information</legend>
-			<span>3</span>
-				<ul>
-					<li class="cardNumber">		
+		<fieldset class="cc">
+			<legend><span class="number">3</span>Finally, enter your payment information</legend>
+				<ul class="fieldsetEntry">
+					<li class="cardNumberContent">		
 						<label for="cardNumber">Card Number</label>
 						<input name="cardNumber" type="text" maxlength="20" id="cardNumber" required>
 					</li>
-					<li>
+					<li class="cardTypeContent">
 						<input type="radio" name="creditCard" value="Amex" id="amex" required>
 						<label for="amex">Amex</label>
 						<input type="radio" name="creditCard" value="Visa" id="visa" required>
@@ -76,7 +75,7 @@
 						<input type="radio" name="creditCard" value="Master Card" id="mc" required>
 						<label for="mc">Master Card</label>
 					</li>
-					<li class="securityCode">		
+					<li class="securityCodeContent">		
 						<label for="securityCode">Security Code</label>
 						<input name="securityCode" type="text" maxlength="4" id="securityCode" required>
 					</li>
