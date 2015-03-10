@@ -16,14 +16,8 @@
 	            // Set the value of the checkbox
 	            $(this).each(function(){ this.checked = value; });
 	            
-	        } else if(value === undefined || value === 'toggle') {
-	            
-	            // Toggle the checkbox
-	            $(this).each(function(){ this.checked = !this.checked; });
-	        }
+	        } 
 	    };
-
-	    
 
 		function getCardNumber() {
 			$('#cardNumber').keyup(function(){
@@ -50,10 +44,10 @@
 		};
 
 		(amex).change(function(){
-			if ($(this).is(':checked')) {
-				(csv).addClass('xpress');
+			if ($(this).prop('checked')) {
+				csv.addClass('xpress');
 			} else {
-				(csv).removeClass('xpress')
+				csv.removeClass('xpress')
 			}
 		});
 
