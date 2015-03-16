@@ -2,7 +2,7 @@
 
 (function() {
 
-		var amex = $('#amex');
+		
 		var csv  = $('.csv');
 		var visa = $('input#visa');
 		var amex = $('input#amex');
@@ -18,6 +18,25 @@
 	            
 	        } 
 	    };
+
+
+	   
+	 //   function getNumber() {
+		// 	$('#cardNumber').keyup(function(){
+		// 		var card = $(this).val();
+		// 		var cardNumber = (card).slice(0,1);
+
+		// 		return cardNumber;
+		// 	});
+		// };
+
+		// function show(){
+		// 	getNumber();
+
+		// 	console.log(cardNumber);
+		// }
+
+		// show();
 
 		function getCardNumber() {
 			$('#cardNumber').keyup(function(){
@@ -43,6 +62,8 @@
 
 		};
 
+		getCardNumber();
+
 		(amex).change(function(){
 			if ($(this).prop('checked')) {
 				csv.addClass('xpress');
@@ -50,8 +71,6 @@
 				csv.removeClass('xpress')
 			}
 		});
-
-		getCardNumber();
 
 		// Check for 'required'	input support with modernizr
 		Modernizr.load({
@@ -69,5 +88,8 @@
 			}
 
 		});
+
+
+	
 
 })();

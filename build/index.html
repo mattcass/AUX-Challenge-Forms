@@ -3,11 +3,8 @@
 <head>
   <title>AUX Form Field Challenge</title>
   
-  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Merriweather">
+  <link rel="stylesheet" href="assets/css/styles.css">
   
   <meta charset="UTF-8">
   <meta http-equiv="cleartype" content="on">
@@ -25,7 +22,7 @@
 <main class="formContainer">
 	<form>
 		<fieldset>
-			<legend><span class="number">1</span>First, name your portfolio</legend>	
+			<legend>First, name your portfolio</legend>	
 				<ul class="fieldsetEntry">
 					<li>		
 						<label for="portfolioName">Portfolio name</label>
@@ -42,7 +39,7 @@
 		</fieldset>
 
 		<fieldset>
-			<legend><span class="number">2</span>Now, enter your account details</legend>
+			<legend>Now, enter your account details</legend>
 				<ul class="fieldsetEntry">
 					<li>		
 						<label for="nameDetails">Name</label>
@@ -50,9 +47,9 @@
 					</li>
 					<li>		
 						<label for="emailDetails" class="emailLabel">Email</label>
-						<input name="emailDetails" type="email" id="emailDetails" class="validate" required>
+						<input name="emailDetails" type="email" id="emailDetails" class="validate emailInput" required>
 						<span class="validation"></span>
-						<p>NOTE: We'll never share your email, promise.</p>
+						<label for="emailDetails" class="emailSecondLabel"><small>NOTE: We'll never share your email, promise.</small></label>
 					</li>
 					<li>		
 						<label for="passwordDetails">Password</label>
@@ -62,7 +59,7 @@
 		</fieldset>
 
 		<fieldset class="cc">
-			<legend><span class="number">3</span>Finally, enter your payment information</legend>
+			<legend>Finally, enter your payment information</legend>
 				<ul class="fieldsetEntry">
 					<li class="cardNumberContent">		
 						<label for="cardNumber">Card Number</label>
