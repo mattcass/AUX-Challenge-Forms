@@ -326,7 +326,7 @@ input#discover:checked + label {
 	background: url('../images/spritez.png') no-repeat -96px 0;
 }
 input#mc + label {
-	background: url('../images/spritez.png') no-repeat -96px -40px;
+	background: url('../images/spritez.png') no-repeat -144px -40px;
 }
 input#mc:checked + label {
 	background: url('../images/spritez.png') no-repeat -144px 0;

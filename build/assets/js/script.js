@@ -2,14 +2,14 @@
 
 (function() {
 
-		
+
 		var csv  = $('.csv');
 		var visa = $('input#visa');
 		var amex = $('input#amex');
 		var discover = $('input#discover');
 		var mastercard = $('input#mc');
 
-
+		// Create a .checked function to see if checkbox is checked
 	 	$.fn.checked = function(value) {
 	        
 	        if(value === true || value === false) {
@@ -19,58 +19,35 @@
 	        } 
 	    };
 
+		$('#cardNumber').validateCreditCard(function(result){
 
-	   
-	 //   function getNumber() {
-		// 	$('#cardNumber').keyup(function(){
-		// 		var card = $(this).val();
-		// 		var cardNumber = (card).slice(0,1);
+			if (result.card_type.name === 'amex') {
+				amex.checked(true);
+			}
+			else if (result.card_type.name === 'visa') {
+				visa.checked(true);
+			}
+			else if (result.card_type.name === 'discover') {
+				discover.checked(true);
+			}
+			else if (result.card_type.name === 'mastercard') {
+				mastercard.checked(true);
+			}
 
-		// 		return cardNumber;
-		// 	});
-		// };
+			changeCSV();
 
-		// function show(){
-		// 	getNumber();
+		});
 
-		// 	console.log(cardNumber);
-		// }
 
-		// show();
-
-		function getCardNumber() {
-			$('#cardNumber').keyup(function(){
-				var card = $(this).val();
-				var cardNumber = (card).slice(0,1);
-
-				console.log(cardNumber);
-
-				if (cardNumber === '3') {
-					(amex).checked(true);
-					(csv).addClass('xpress');
-				} else if (cardNumber === '4') {
-					(visa).checked(true);
-					(csv).removeClass('xpress');
-				} else if (cardNumber === '5') {
-					(mastercard).checked(true); 
-					(csv).removeClass('xpress');
-				} else if (cardNumber === '6'){
-					(discover).checked(true);
-					(csv).removeClass('xpress');
-				}
-			});
-
+		function changeCSV() {
+			if (amex.is(':checked')) {
+				csv.addClass('xpress');
+			} 
+			else {
+				csv.removeClass('xpress');
+			}
 		};
 
-		getCardNumber();
-
-		(amex).change(function(){
-			if ($(this).prop('checked')) {
-				csv.addClass('xpress');
-			} else {
-				csv.removeClass('xpress')
-			}
-		});
 
 		// Check for 'required'	input support with modernizr
 		Modernizr.load({
@@ -88,8 +65,5 @@
 			}
 
 		});
-
-
-	
 
 })();
