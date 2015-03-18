@@ -88,9 +88,9 @@ legend::before {
 	counter-increment: fieldset;
 	content: counter(fieldset);
 	display: inline-block;
-	width: 35px;
-	height: 35px;
-	border-radius: 35px;
+	width: 32px;
+	height: 32px;
+	border-radius: 32px;
 	margin-left: -58px;
 	margin-right: 1%;
 	border: 8px solid white;	
@@ -98,21 +98,6 @@ legend::before {
 	color: white;
 	text-align: center;
 	margin-top: 1px;
-}
-
-.number {
-	float: left;
-	font-size: 1.5rem;	
-	line-height: 2rem;
-	margin-left: -61px;
-	margin-top: -4px;
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
-	border: 8px solid white;	
-	background: #52A3D4;	
-	color: white;
-	text-align: center;
 }
 
 fieldset {
@@ -258,7 +243,7 @@ input.creditCard {
 	width: 45%;
 	height: 33px;
 	padding-left: 2%;	
-	padding-top: 6px;
+	padding-top: 2px;
 }
 
 .securityCodeContent input {
